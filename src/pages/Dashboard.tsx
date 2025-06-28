@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { useForm } from 'react-hook-form';
 import { z } from 'zod';
 import { zodResolver } from '@hookform/resolvers/zod';
@@ -11,6 +11,7 @@ import {
   Star, Trophy, Users, Smartphone, Zap, Play, BookOpen,
   PlusCircle, Settings, BarChart3, Camera, MapPin
 } from 'lucide-react';
+import { useNavigate } from 'react-router-dom';
 
 const BMISchema = z.object({
   height: z.number().min(50, "Height must be at least 50cm").max(250, "Height must be less than 250cm"),
@@ -20,12 +21,33 @@ const BMISchema = z.object({
 type BMIFormData = z.infer<typeof BMISchema>;
 
 const Dashboard: React.FC = () => {
+  const navigate = useNavigate();
   const [bmiResult, setBmiResult] = useState<{bmi: number, category: string} | null>(null);
   const [activeTab, setActiveTab] = useState('overview');
+  const [userName, setUserName] = useState<string>('User');
   
   const { register, handleSubmit, formState: { errors }, reset } = useForm<BMIFormData>({
     resolver: zodResolver(BMISchema)
   });
+
+  useEffect(() => {
+    // Get user data from localStorage
+    const userData = localStorage.getItem('sz_logged_in');
+    if (userData) {
+      const user = JSON.parse(userData);
+      // Use full name if available, otherwise use email or mobile number
+      const displayName = user.fullName || user.email || user.mobileNumber || user.userId || 'User';
+      setUserName(displayName);
+    } else {
+      // If no user is logged in, redirect to login
+      navigate('/login');
+    }
+  }, [navigate]);
+
+  const handleLogout = () => {
+    localStorage.removeItem('sz_logged_in');
+    navigate('/login');
+  };
 
   const calculateBMI = (data: BMIFormData) => {
     const heightInMeters = data.height / 100;
@@ -75,7 +97,7 @@ const Dashboard: React.FC = () => {
               </div>
               <div>
                 <h1 className="text-2xl font-bold bg-gradient-to-r from-green-600 via-pink-500 to-teal-600 bg-clip-text text-transparent">
-                  Welcome back, Priya!
+                  Welcome back, {userName}!
                 </h1>
                 <p className="text-gray-600">Let's continue your wellness journey</p>
               </div>
@@ -88,6 +110,14 @@ const Dashboard: React.FC = () => {
               <Button variant="outline" size="sm" className="border-gray-200">
                 <Settings className="w-4 h-4 mr-2" />
                 Settings
+              </Button>
+              <Button 
+                variant="outline" 
+                size="sm" 
+                className="border-red-200 text-red-600 hover:bg-red-50"
+                onClick={handleLogout}
+              >
+                Logout
               </Button>
             </div>
           </div>

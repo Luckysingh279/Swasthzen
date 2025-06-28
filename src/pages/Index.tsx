@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
@@ -26,11 +25,11 @@ const Index = () => {
               <a href="#features" className="text-gray-700 hover:text-pink-600 transition-colors">Features</a>
               <a href="#plans" className="text-gray-700 hover:text-pink-600 transition-colors">Plans</a>
               <a href="#community" className="text-gray-700 hover:text-pink-600 transition-colors">Community</a>
-              <Link to="/dashboard" className="text-gray-700 hover:text-pink-600 transition-colors">Dashboard</Link>
+              <Link to="/login" className="text-gray-700 hover:text-pink-600 transition-colors">Login</Link>
             </div>
-            <Link to="/dashboard">
+            <Link to="/trial-signup">
               <Button className="bg-gradient-to-r from-pink-500 to-rose-500 hover:from-pink-600 hover:to-rose-600">
-                Get Started
+                Start Free Trial
               </Button>
             </Link>
           </div>
@@ -57,7 +56,7 @@ const Index = () => {
           </p>
           
           <div className="flex flex-col sm:flex-row gap-6 justify-center mb-16">
-            <Link to="/dashboard">
+            <Link to="/trial-signup">
               <Button 
                 size="lg" 
                 className="group bg-gradient-to-r from-green-600 via-pink-500 to-teal-600 hover:from-green-700 hover:via-pink-600 hover:to-teal-700 transform hover:scale-105 transition-all duration-300 shadow-xl hover:shadow-2xl px-10 py-7 text-xl"
@@ -436,7 +435,7 @@ const Index = () => {
           <h3 className="text-4xl font-bold mb-4">Ready to Transform Your Health?</h3>
           <p className="text-xl mb-8 opacity-90">Join thousands who have already started their wellness journey with SwasthZenith</p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link to="/dashboard">
+            <Link to="/trial-signup">
               <Button 
                 size="lg"
                 className="group bg-white text-pink-600 hover:bg-gray-100 transform hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-xl px-12 py-6 text-xl font-semibold"

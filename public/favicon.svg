@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" fill="none">
+  <!-- Background circle -->
+  <circle cx="16" cy="16" r="16" fill="#10b981"/>
+  
+  <!-- Lotus flower representing wellness -->
+  <g fill="#ffffff" opacity="0.9">
+    <!-- Lotus petals -->
+    <path d="M16 8 Q20 10 20 16 Q20 22 16 24 Q12 22 12 16 Q12 10 16 8Z"/>
+    <path d="M16 8 Q22 12 24 16 Q22 20 16 24 Q10 20 8 16 Q10 12 16 8Z"/>
+    <path d="M16 8 Q20 12 24 16 Q20 20 16 24 Q12 20 8 16 Q12 12 16 8Z"/>
+  </g>
+  
+  <!-- Center of lotus -->
+  <circle cx="16" cy="16" r="4" fill="#059669"/>
+  <circle cx="16" cy="16" r="2" fill="#047857"/>
+  
+  <!-- Wellness symbol -->
+  <circle cx="16" cy="16" r="1" fill="#ffffff"/>
+</svg> 
