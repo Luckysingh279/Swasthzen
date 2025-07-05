@@ -191,28 +191,28 @@ const Index = () => {
               Nutrition & Diet
             </h4>
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-              <Card className="group hover:shadow-lg transition-all duration-300 bg-gradient-to-br from-green-50 to-emerald-50 border-green-200">
+              <Card className="group hover:shadow-lg transition-all duration-300 bg-gradient-to-br from-green-50 to-emerald-50 border-green-200 cursor-pointer">
                 <CardContent className="p-6 text-center">
                   <Target className="w-8 h-8 text-green-600 mx-auto mb-3 group-hover:scale-110 transition-transform" />
                   <h5 className="font-semibold text-gray-800 mb-2">Personal Diet Plan</h5>
-                  <p className="text-sm text-gray-600">Customized meal plans based on your goals</p>
+                  <p className="text-sm text-gray-600">Veg/Non-veg meal plans based on BMI & goals</p>
                 </CardContent>
               </Card>
-              <Card className="group hover:shadow-lg transition-all duration-300 bg-gradient-to-br from-green-50 to-emerald-50 border-green-200">
+              <Card className="group hover:shadow-lg transition-all duration-300 bg-gradient-to-br from-green-50 to-emerald-50 border-green-200 cursor-pointer">
                 <CardContent className="p-6 text-center">
                   <Activity className="w-8 h-8 text-green-600 mx-auto mb-3 group-hover:scale-110 transition-transform" />
-                  <h5 className="font-semibold text-gray-800 mb-2">Calorie Tracker</h5>
-                  <p className="text-sm text-gray-600">Log meals and track your daily nutrition</p>
+                  <h5 className="font-semibold text-gray-800 mb-2">Weekly Meal Plans</h5>
+                  <p className="text-sm text-gray-600">Complete 7-day personalized meal schedules</p>
                 </CardContent>
               </Card>
-              <Card className="group hover:shadow-lg transition-all duration-300 bg-gradient-to-br from-green-50 to-emerald-50 border-green-200">
+              <Card className="group hover:shadow-lg transition-all duration-300 bg-gradient-to-br from-green-50 to-emerald-50 border-green-200 cursor-pointer">
                 <CardContent className="p-6 text-center">
                   <Bell className="w-8 h-8 text-green-600 mx-auto mb-3 group-hover:scale-110 transition-transform" />
-                  <h5 className="font-semibold text-gray-800 mb-2">Water Reminders</h5>
-                  <p className="text-sm text-gray-600">Smart hydration tracking and reminders</p>
+                  <h5 className="font-semibold text-gray-800 mb-2">Calorie Tracking</h5>
+                  <p className="text-sm text-gray-600">Smart nutrition tracking with BMI calculation</p>
                 </CardContent>
               </Card>
-              <Card className="group hover:shadow-lg transition-all duration-300 bg-gradient-to-br from-green-50 to-emerald-50 border-green-200">
+              <Card className="group hover:shadow-lg transition-all duration-300 bg-gradient-to-br from-green-50 to-emerald-50 border-green-200 cursor-pointer">
                 <CardContent className="p-6 text-center">
                   <CheckCircle className="w-8 h-8 text-green-600 mx-auto mb-3 group-hover:scale-110 transition-transform" />
                   <h5 className="font-semibold text-gray-800 mb-2">Shopping Lists</h5>
@@ -267,18 +267,32 @@ const Index = () => {
               Community & Engagement
             </h4>
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-              <Card className="group hover:shadow-lg transition-all duration-300 bg-gradient-to-br from-purple-50 to-pink-50 border-purple-200">
+              <Card className="group hover:shadow-lg transition-all duration-300 bg-gradient-to-br from-purple-50 to-pink-50 border-purple-200 cursor-pointer">
                 <CardContent className="p-6 text-center">
                   <MessageCircle className="w-8 h-8 text-purple-600 mx-auto mb-3 group-hover:scale-110 transition-transform" />
                   <h5 className="font-semibold text-gray-800 mb-2">Community Forum</h5>
                   <p className="text-sm text-gray-600">Connect with fellow wellness enthusiasts</p>
+                  <Button 
+                    size="sm" 
+                    className="mt-3 bg-green-600 hover:bg-green-700"
+                    onClick={() => window.open('https://chat.whatsapp.com/Ecgmkb3479KFbO70Xb78jm', '_blank')}
+                  >
+                    Join WhatsApp Group
+                  </Button>
                 </CardContent>
               </Card>
-              <Card className="group hover:shadow-lg transition-all duration-300 bg-gradient-to-br from-purple-50 to-pink-50 border-purple-200">
+              <Card className="group hover:shadow-lg transition-all duration-300 bg-gradient-to-br from-purple-50 to-pink-50 border-purple-200 cursor-pointer">
                 <CardContent className="p-6 text-center">
                   <Users className="w-8 h-8 text-purple-600 mx-auto mb-3 group-hover:scale-110 transition-transform" />
                   <h5 className="font-semibold text-gray-800 mb-2">Personal Coach</h5>
                   <p className="text-sm text-gray-600">One-on-one chat with certified coaches</p>
+                  <Button 
+                    size="sm" 
+                    className="mt-3 bg-green-600 hover:bg-green-700"
+                    onClick={() => window.open('https://wa.me/917760210344?text=Hi! I would like to chat with a wellness coach about my fitness goals.', '_blank')}
+                  >
+                    Chat on WhatsApp
+                  </Button>
                 </CardContent>
               </Card>
               <Card className="group hover:shadow-lg transition-all duration-300 bg-gradient-to-br from-purple-50 to-pink-50 border-purple-200">

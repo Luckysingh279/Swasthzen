@@ -9,6 +9,9 @@ import NotFound from "./pages/NotFound";
 import Login from "./pages/Login";
 import Signup from "./pages/Signup";
 import TrialSignup from "./pages/TrialSignup";
+import DietPlan from "./pages/DietPlan";
+import WhatsAppFloat from "./components/WhatsAppFloat";
+import AIChat from "./components/AIChat";
 
 const queryClient = new QueryClient();
 
@@ -24,8 +27,11 @@ const App = () => (
           <Route path="/signup" element={<Signup />} />
           <Route path="/trial-signup" element={<TrialSignup />} />
           <Route path="/dashboard" element={<Dashboard />} />
+          <Route path="/diet-plan" element={<DietPlan />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
+        <WhatsAppFloat />
+        <AIChat />
       </BrowserRouter>
     </TooltipProvider>
   </QueryClientProvider>

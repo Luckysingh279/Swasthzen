@@ -6,8 +6,8 @@ import { useNavigate, Link } from "react-router-dom";
 
 const signupSchema = z.object({
   userId: z.string().min(3, "User ID is required"),
-  password: z.string().min(6, "Password must be at least 6 characters"),
-  confirmPassword: z.string().min(6, "Confirm your password"),
+  password: z.string().min(4, "Password must be at least 4 characters"),
+  confirmPassword: z.string().min(4, "Confirm your password"),
 }).refine((data) => data.password === data.confirmPassword, {
   message: "Passwords do not match",
   path: ["confirmPassword"],

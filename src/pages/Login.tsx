@@ -6,7 +6,7 @@ import { useNavigate, Link } from "react-router-dom";
 
 const loginSchema = z.object({
   emailOrMobile: z.string().min(1, "Email or mobile number is required"),
-  password: z.string().min(1, "Password is required"),
+  password: z.string().min(4, "Password must be at least 4 characters"),
 });
 
 type LoginForm = z.infer<typeof loginSchema>;

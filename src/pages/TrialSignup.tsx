@@ -8,8 +8,8 @@ const trialSignupSchema = z.object({
   fullName: z.string().min(2, "Full name must be at least 2 characters"),
   email: z.string().email("Please enter a valid email address"),
   mobileNumber: z.string().min(10, "Please enter a valid mobile number"),
-  password: z.string().min(8, "Password must be at least 8 characters"),
-  confirmPassword: z.string().min(8, "Confirm your password"),
+  password: z.string().min(4, "Password must be at least 4 characters"),
+  confirmPassword: z.string().min(4, "Confirm your password"),
   agreeToTerms: z.boolean().refine(val => val === true, "You must agree to the terms and conditions"),
 }).refine((data) => data.password === data.confirmPassword, {
   message: "Passwords do not match",

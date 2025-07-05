@@ -387,14 +387,16 @@ const Dashboard: React.FC = () => {
               <Button 
                 variant="outline" 
                 className="group h-20 border-2 border-green-300 hover:border-green-500 hover:bg-gradient-to-r hover:from-green-50 hover:to-emerald-50 transform hover:scale-105 transition-all duration-300 flex flex-col space-y-2"
+                onClick={() => navigate('/diet-plan')}
               >
                 <PlusCircle className="w-6 h-6 text-green-600 group-hover:rotate-90 transition-transform duration-500" />
-                <span className="text-green-600 font-medium">Log Meal</span>
+                <span className="text-green-600 font-medium">Diet Plan</span>
               </Button>
               
               <Button 
                 variant="outline" 
                 className="group h-20 border-2 border-teal-300 hover:border-teal-500 hover:bg-gradient-to-r hover:from-teal-50 hover:to-cyan-50 transform hover:scale-105 transition-all duration-300 flex flex-col space-y-2"
+                onClick={() => window.open('https://wa.me/917760210344?text=Hi! I would like to chat with a wellness coach about my fitness goals.', '_blank')}
               >
                 <MessageCircle className="w-6 h-6 text-teal-600 group-hover:animate-pulse transition-transform" />
                 <span className="text-teal-600 font-medium">Chat with Coach</span>
@@ -403,6 +405,7 @@ const Dashboard: React.FC = () => {
               <Button 
                 variant="outline" 
                 className="group h-20 border-2 border-purple-300 hover:border-purple-500 hover:bg-gradient-to-r hover:from-purple-50 hover:to-pink-50 transform hover:scale-105 transition-all duration-300 flex flex-col space-y-2"
+                onClick={() => window.open('https://chat.whatsapp.com/Ecgmkb3479KFbO70Xb78jm', '_blank')}
               >
                 <Users className="w-6 h-6 text-purple-600 group-hover:scale-110 transition-transform" />
                 <span className="text-purple-600 font-medium">Join Community</span>
